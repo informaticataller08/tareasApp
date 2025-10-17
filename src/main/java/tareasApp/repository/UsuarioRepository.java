@@ -1,6 +1,6 @@
 package tareasApp.repository;
 
-import tareasApp.demo.model.Usuario;
+import tareasApp.model.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.Optional;
 
