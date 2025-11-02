@@ -18,15 +18,10 @@ public class CustomUserDetails implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        System.out.println("Usuario logueado: " + usuario.getNombre());
-        System.out.println("Roles en CustomUserDetails: " + usuario.getRoles());
 
-
-
-        return usuario.getRoles()
-                .stream()
+        return usuario.getRoles().stream()
                 .map(SimpleGrantedAuthority::new)
-                .collect(Collectors.toList());
+                .toList();
     }
 
     @Override
