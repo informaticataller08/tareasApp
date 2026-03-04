@@ -1,0 +1,60 @@
+sistematareas/
+ ├── src/
+ │   ├── main/
+ │   │   ├── java/
+ │   │   │   └── com/sistematareas/
+ │   │   │       ├── controller/          → Controladores web (manejan rutas y vistas)
+ │   │   │       │    ├── AuthController.java
+ │   │   │       │    ├── TareaController.java
+ │   │   │       │    └── UsuarioController.java
+ │   │   │       │
+ │   │   │       ├── model/               → Entidades JPA (representan tablas de BD)
+ │   │   │       │    ├── Usuario.java
+ │   │   │       │    ├── Tarea.java
+ │   │   │       │    └── enums/
+ │   │   │       │         ├── Rol.java
+ │   │   │       │         └── EstadoTarea.java
+ │   │   │       │
+ │   │   │       ├── repository/          → Interfaces que acceden a la base de datos
+ │   │   │       │    ├── UsuarioRepository.java
+ │   │   │       │    └── TareaRepository.java
+ │   │   │       │
+ │   │   │       ├── service/             → Lógica de negocio
+ │   │   │       │    ├── UsuarioService.java
+ │   │   │       │    ├── TareaService.java
+ │   │   │       │    └── impl/
+ │   │   │       │         ├── UsuarioServiceImpl.java
+ │   │   │       │         └── TareaServiceImpl.java
+ │   │   │       │
+ │   │   │       ├── security/            → Configuración de autenticación y roles
+ │   │   │       │    ├── SecurityConfig.java
+ │   │   │       │    ├── CustomUserDetails.java
+ │   │   │       │    └── CustomUserDetailsService.java
+ │   │   │       │
+ │   │   │       └── SistematareasApplication.java  → Clase principal con @SpringBootApplication
+ │   │   │
+ │   │   └── resources/
+ │   │       ├── static/                  → Archivos estáticos (CSS, JS, imágenes)
+ │   │       │    ├── css/
+ │   │       │    │    └── estilos.css
+ │   │       │    └── js/
+ │   │       │         └── funciones.js
+ │   │       │
+ │   │       ├── templates/               → Vistas Thymeleaf (HTML)
+ │   │       │    ├── login.html
+ │   │       │    ├── tareas.html
+ │   │       │    ├── tarea_form.html
+ │   │       │    ├── admin.html
+ │   │       │    └── fragments/          → (opcional) para headers, navbar, etc.
+ │   │       │         └── layout.html
+ │   │       │
+ │   │       ├── application.properties   → Configuración (BD, puerto, seguridad, etc.)
+ │   │       └── data.sql                 → Datos iniciales (usuarios, tareas demo)
+ │   │
+ │   └── test/
+ │       └── java/com/sistematareas/      → Tests unitarios e integración
+ │            ├── service/
+ │            └── controller/
+ │
+ ├── pom.xml                              → Dependencias y configuración de Maven
+ └── README.md                            → Documentación del proyecto

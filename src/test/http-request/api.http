@@ -1,0 +1,16 @@
+### GET request to example server
+POST http://localhost:8080/api/dispositivos
+Content-Type: application/json
+
+{
+    "tipo":"LAPTOP,
+    "oficina" : "Desarrollo",
+    "destino" : "Ana Gomez",
+    "descripcion" : "MacBook"
+}
+
+###listar dispositivos
+GET http://localhost:8080/api/dispositivos
+Accept: application/json
+
+###
