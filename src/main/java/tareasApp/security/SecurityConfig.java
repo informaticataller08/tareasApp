@@ -21,7 +21,9 @@ public class SecurityConfig {
     SecurityFilterChain filterChain(HttpSecurity http, LoginSuccessHandler success) throws Exception {
         http
                 .authorizeHttpRequests(reg -> reg
-                        .requestMatchers("/login", "/css/**", "/js/**").permitAll()
+                        .requestMatchers("/login", "/css/**", "/js/**").permitAll() // Rutas públicas
+                        .requestMatchers("/tareas/**").authenticated()              // Rutas de tareas
+                        .requestMatchers("/inventario/**").authenticated()          // <--- AGREGA ESTA LÍNEA
                         .requestMatchers("/admin/**").hasRole("ADMIN")
                         .anyRequest().authenticated()
                 )
